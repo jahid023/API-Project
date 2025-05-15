@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWise - Modern Dictionary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WordWise</h1>
+            <p class="tagline">Your modern dictionary companion</p>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter a word...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <main id="results" class="hidden">
+            <div class="word-header">
+                <h2 id="word">Word</h2>
+                <p id="phonetic" class="phonetic"></p>
+                <button id="audioBtn" class="audio-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+
+            <div id="meanings">
+                <!-- Meanings will be inserted here by JavaScript -->
+            </div>
+        </main>
+
+
+        <div id="error" class="hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>Sorry, we couldn't find the word you were looking for.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with <i class="fas fa-heart"></i> using Dictionary API</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
